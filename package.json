@@ -1,0 +1,36 @@
+{
+  "name": "ts-macro-test",
+  "version": "1.0.0",
+  "main": "build/src/index.js",
+  "types": "build/src/index.d.ts",
+  "repository": "git@github.com:ITStar10/ts-macro-test.git",
+  "author": "Alex <trust2ray@gmail.com>",
+  "license": "MIT",
+  "files": [
+    "build/src"
+  ],
+  "directories": {
+    "src": "src",
+    "test": "tests"
+  },
+  "scripts": {
+    "tests": "ts-mocha './test/**/*.tests.ts'",
+    "test": "ts-mocha --timeout 200000",
+    "lint": "gts lint",
+    "clean": "gts clean",
+    "compile": "rm -rf build && tsc",
+    "build": "rm -rf build && tsc",
+    "fix": "gts fix",
+    "prepare": "npm run compile"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.3.10",
+    "@types/mocha": "^10.0.4",
+    "chai": "^4.3.10",
+    "mocha": "^10.2.0",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "ts-macros": "^2.6.0"
+  }
+}
